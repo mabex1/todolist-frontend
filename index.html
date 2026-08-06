@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker | Infrastructure Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Tracker</h1>
+            <p class="subtitle">System Status: <span class="badge online">API Online</span></p>
+        </header>
+
+        <!-- Форма добавления задачи -->
+        <form id="add-task-form" class="task-form">
+            <input 
+                type="text" 
+                id="task-name-input" 
+                placeholder="Что нужно сделать?" 
+                required 
+                autocomplete="off"
+            />
+            <button type="submit" id="add-btn">Добавить</button>
+        </form>
+
+        <!-- Список задач -->
+        <div class="tasks-container">
+            <ul id="tasks-list" class="tasks-list">
+                <!-- Задачи будут рендериться динамически через JS -->
+            </ul>
+            <div id="empty-state" class="empty-state hidden">
+                <p>Задач пока нет. Отличная работа!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
